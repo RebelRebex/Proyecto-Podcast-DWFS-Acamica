@@ -1,0 +1,481 @@
+@import './variables.scss';
+
+* {
+    box-sizing: border-box;
+    color: $texto-general;
+    font-family: $mono;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.barra-nav {
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 44px;
+    z-index: 3;
+}
+
+.logo {
+    display: block;
+    float: left;
+    padding: 10px 16px;
+}
+
+.boton-menu {
+    display: none;
+}
+
+.boton-hamb {
+    cursor: pointer;
+    float: right;
+    position: relative;
+    
+    i {
+        display: block;
+        padding: 16px 16px 10px;
+        position: relative;
+    }
+}
+
+.cruz {
+    cursor: pointer;
+    float: right;
+    position: relative;
+
+    i {
+        display: none;
+        padding: 16px 16px 10px;
+        position: relative;
+    }
+}
+
+.lista-menu {
+    background-color: $azul;
+    clear: both;
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .2s ease-in-out;
+        
+    .elemento-menu {
+        color: white;
+        line-height: 28px;
+        text-decoration: none;
+    }
+}
+
+#boton-menu:checked ~ .lista-menu {
+    max-height: 240px;
+
+    .boton-hamb {        
+        display: none;
+    }
+
+    .cruz {
+        display: block;
+    }
+}
+
+.titulo {
+    font-family: $sans;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 42px;
+    margin: 73px 0px 16px 16px;
+    position: relative;
+}
+
+.world {
+    font-family: $sans;
+    text-decoration: line-through;
+}
+
+.bajada-seccion1 {
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 16px;
+    position: relative;
+}
+
+.boton-celeste {
+    align-items: center;    
+    background-color: #00F3BB;
+    border: 0px;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    height: 48px;
+    margin: 24px 16px;
+    width: 288px;
+        
+    .conoce-mas {
+        text-decoration: none;
+    }
+}
+
+.boton-celeste:hover {
+    background-image: linear-gradient(to right, $celeste, $azul-oscuro);
+        
+    .conoce-mas {
+        color: white;
+    }
+
+    .boton-episodios {
+        color: white;
+    }
+}
+
+.rectangulo-azul {
+    background-image: linear-gradient(225deg, $azul, $azul-oscuro);
+    height: 1203.5px;
+    margin-top: 24px;
+    position: absolute;
+    transform: skewY(-6deg);
+    width: 100%;
+    z-index: -1;
+}
+
+.titulo-episodios {
+    color: white;
+    font-family: $sans;
+    font-size: 36px;
+    font-weight: 300;
+    margin-left: 16px;
+    margin-top: 90px;
+    position: relative;
+}
+
+.episodios-spoty {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+        
+    iframe {
+        background-color: transparent;
+        border: 0px;
+        height: 232px; 
+        margin: 0px 16px 6px 16px;
+        width: 298px;
+    }
+}
+
+.seccion3 {
+      
+    .telefono {
+        height: 519px;
+        width: 340px;
+        margin-top: 48px;
+    }
+
+    .de-donde-venimos {
+        font-family: $sans;
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 42px;
+        margin: 27px 16px;
+        position: relative;
+    }
+    
+    .parrafos{
+        font-size: 14px;
+        line-height: 22px;
+        margin: 8px 16px;
+        position: relative;
+    }
+}    
+
+.invitades-estelares {
+    display: flex;
+    flex-direction: column;
+
+    .titulo-invitades {
+        font-family: $sans;
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 42px;
+        margin: 54px 16px 14px 16px;
+        position: relative;
+    }
+
+    .inv {
+        width: 100%;
+    }    
+}
+
+.titulo-nuestros-temas {
+    font-family: $sans;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 42px;
+    margin: 54px 16px 14px 16px;
+    position: relative;
+}
+
+.tema {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 36px 16px;
+
+    .icon {
+        margin: 13px;
+    }
+
+    h4 {
+        font-family: $sans;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0px;
+        text-align: center;
+        width: 182px;
+    }
+}
+
+.rectangulo-azul2 {
+    background-image: linear-gradient(225deg, $azul, $azul-oscuro);
+    height: 460px;
+    margin-top: 24px;
+    position: absolute;
+    transform: skewY(-6deg);
+    width: 100%;
+    z-index: -1;
+}
+
+.novedades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .titulo-novedades {
+        color: white;
+        font-family: $sans;
+        font-size: 36px;
+        font-weight: 300;
+        margin-left: 16px;
+        margin-top: 106px;
+        position: relative;
+        text-align: center;
+    }
+
+    .boton-celeste2 {
+        align-items: center;    
+        background-color: #00F3BB;
+        border: 0px;
+        cursor: pointer;
+        display: flex;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        height: 48px;
+        margin: 24px 16px;
+        width: 288px;
+ 
+        .boton-episodios {
+            text-decoration: none;
+            margin: 24px 0px;
+        }
+    }
+    
+    .boton-celeste2:hover {
+        background-image: linear-gradient(to right, $celeste, $azul-oscuro);
+            
+        .conoce-mas {
+            color: white;
+        }
+    
+        .boton-episodios {
+            color: white;
+        }
+    }
+    
+}
+
+.rectangulo-blanco {
+    align-items: center; 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 121px;
+    margin-top: 67px;
+    position: relative;
+    width: 100%;
+
+    .icons {
+        margin: 0px 38px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+} 
+
+@media (min-width: 700px) {
+    
+    .barra-nav {
+        height: 80px;
+    }
+
+    .logo {
+        padding: 22px 100px;
+    }
+
+    .lista-menu {
+        background-color: white;
+        clear: none;
+        float: right;   
+        max-height: none;
+        padding-right: 100px;
+
+        li {
+            float: left;
+        }
+
+        .elemento-menu {
+            color: $texto-general;
+            padding-right: 48px;
+        }
+    }   
+    
+    .elemento-menu:hover {
+        color: $celeste;
+        text-decoration: line-through;
+    }
+
+    .elemento-menu:active {
+        color: $texto-general;
+        opacity: 55%;
+        text-decoration: line-through;
+    }
+
+    .boton-hamb {
+    display: none;
+    }
+
+    .seccion1 {
+        margin-left: 200px;
+
+        .titulo {
+            font-size: 64px;
+            margin-top: 120px;
+
+            .punto-azul {
+            color: $azul;
+            }
+        }
+
+        .bajada-seccion1 {
+            font-size: 16px;
+            margin-top: 30px;
+            width: 628px;
+        }
+    } 
+
+    .boton-celeste {
+        height: 56px;
+        margin-top: 56px;
+        width: 226px;   
+    }
+
+    .rectangulo-azul {
+        height: 800px;
+    }
+
+    .titulo-episodios {
+        font-size: 48px;
+        margin-top: 186px;
+        margin-left: 200px;
+    }
+
+    .episodios-spoty {
+
+        iframe {
+         height: 232px;
+         margin-bottom: 72px;
+         width: 584px;
+        }
+    }
+
+    .invitades-estelares {
+        
+        .titulo-invitades {
+            font-size: 48px;
+            padding: 0px 0px 36px 200px; 
+        }
+
+        .invitades {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .inv {
+                border: 0px;
+                padding: 0px;
+                margin: 0px;
+                width: 33.3%;
+            }
+        }    
+    }
+
+    .seccion3 {
+        align-items: center;
+        margin-left: 200px;
+        margin-right: 256px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .titulo-parrafo {
+            margin-left: 62px;
+
+            .de-donde-venimos {
+                font-size: 48px;
+            }
+
+            .parrafos {
+                font-size: 16px;
+                width: 464px;
+            }
+
+        }
+
+    }
+
+    .nuestros-temas {
+        padding: 0px 200px 50px 200px;
+
+        .titulo-nuestros-temas {
+            font-size: 48px;
+        }
+
+        .temas {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .rectangulo-azul2 {
+        height: 390px;
+    }
+
+    .rectangulo-blanco {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 150px;
+    }
+}    
+
